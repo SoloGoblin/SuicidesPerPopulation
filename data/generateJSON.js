@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-let countrys = {};
+let countries = {};
 
 let suicides_csv = fs.readFileSync('suicideCSV.csv', 'utf8');
 
@@ -16,8 +16,8 @@ suicides.forEach(function(suicide) {
     suicideStats['year'] = suicideInfo[5];
     suicideStats['value'] = suicideInfo[6];
 
-    countrys[suicideCountry]=suicideStats;
+    countries[suicideCountry]=suicideStats;
   }
 });
 
-fs.writeFileSync('suicides.json', JSON.stringify(countrys), 'utf8');
+fs.writeFileSync('suicides.json', JSON.stringify(countries), 'utf8');
