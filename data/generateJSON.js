@@ -7,7 +7,7 @@ let suicides_csv = fs.readFileSync('suicideCSV.csv', 'utf8');
 let suicides = suicides_csv.split("\n");
 
 suicides.forEach(function(suicide) {
-  let suicideInfo = suicide.split(';');
+  let suicideInfo = suicide.split(',');
 
   let suicideCountry = suicideInfo[0];
 
