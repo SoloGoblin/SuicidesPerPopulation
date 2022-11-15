@@ -2,7 +2,7 @@ const fs = require('fs');
 
 let characters = {};
 
-let peeps_csv = fs.readFileSync('Characters.csv', 'utf8');
+let peeps_csv = fs.readFileSync('suicideCSV.csv', 'utf8');
 
 let peeps = peeps_csv.split("\n");
 
