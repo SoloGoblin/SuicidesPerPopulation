@@ -1,22 +1,22 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let character_info = JSON.parse(fs.readFileSync('../data/potter.json', 'utf8'));
+let country_info = JSON.parse(fs.readFileSync('../data/suicides.json', 'utf8'));
 let index_template = fs.readFileSync('views/index.ejs', 'utf8');
-let character_template = fs.readFileSync('views/character.ejs', 'utf8');
+let country_template = fs.readFileSync('views/countries.ejs', 'utf8');
 
 /*
   1) Generate a web page for each character
   2) Keep track of the link for index.html
 */
-for (character in character_info){
-  let character_html = ejs.render(character_template, {
-    filename: __dirname + '/views/character.ejs',
-    stats: character_info[character],
-    name: character
+for (country in country_info){
+  let country_html = ejs.render(country_template, {
+    filename: __dirname + '/views/countries.ejs',
+    stats: country_info[country],
+    name: country
   });
-  character_info[character].link = getBetterFileName(character);
-  fs.writeFileSync('../public/'+character_info[character].link+'.html', character_html, 'utf8');
+  country_info[country].link = getBetterFileName(country);
+  fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
 
 }
 
@@ -25,13 +25,13 @@ for (character in character_info){
 */
 let index_html = ejs.render(index_template, {
   filename: __dirname + '/views/index.ejs',
-  data: character_info
+  data: country_info
 });
 
 fs.writeFileSync('../public/index.html', index_html, 'utf8');
 
-function getBetterFileName(characterName){
-  let betterFileName = characterName.split(" ").join("_");
+function getBetterFileName(countryName){
+  let betterFileName = countryName.split(" ").join("_");
   betterFileName = betterFileName.split(".").join("");
   betterFileName = betterFileName.split("(").join("");
   betterFileName = betterFileName.split(")").join("");
