@@ -1,29 +1,23 @@
 const fs = require('fs');
 
-let characters = {};
+let countrys = {};
 
-let peeps_csv = fs.readFileSync('suicideCSV.csv', 'utf8');
+let suicides_csv = fs.readFileSync('suicideCSV.csv', 'utf8');
 
-let peeps = peeps_csv.split("\n");
+let suicides = suicides_csv.split("\n");
 
-peeps.forEach(function(peep) {
-  let character_info = peep.split(';');
+suicides.forEach(function(suicide) {
+  let suicideInfo = suicide.split(';');
 
-  let character_name = character_info[1];
+  let suicideCountry = suicideInfo[0];
 
-  if(character_name!="Name"){
-    let characterStats = {};
-    characterStats['gender'] = character_info[2];
-    characterStats['house'] = character_info[4];
-    characterStats['species'] = character_info[7];
-    if (character_info[12])
-      characterStats['skills'] = character_info[12].split('|');
-    else {
-      characterStats['skills'] = [];
-    }
+  if(suicideCountry!="LOCATION"){
+    let suicideStats = {};
+    suicideStats['year'] = suicideInfo[5];
+    suicideStats['value'] = suicideInfo[6];
 
-    characters[character_name]=characterStats;
+    countrys[suicideCountry]=suicideStats;
   }
 });
 
-fs.writeFileSync('potter.json', JSON.stringify(characters), 'utf8');
+fs.writeFileSync('suicides.json', JSON.stringify(countrys), 'utf8');
