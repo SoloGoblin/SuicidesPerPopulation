@@ -1,9 +1,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About</title>
-    <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="{{< param 'cdn.css' >}}" rel="stylesheet" integrity="{{< param 'cdn.css_hash' >}}" crossorigin="anonymous">
   </head>
 
   <body>
@@ -77,6 +77,6 @@
     <p>Solomon: Use ejs templating and ploty to implement the baseline micro and macro views of the world</p>
     <p>Nicole: Learn how to make drop down menus, create all clickable links, specifically on each country (once they have been implemented)</p>
     <p>Solomon+Nicole: Clean up the UI and use CSS/Bootstrap to make it appear neat for the final presentation</p>
-
+  <script src="{{< param 'cdn.js_bundle' >}}" integrity="{{< param 'cdn.js_bundle_hash' >}}" crossorigin="anonymous"></script>
   </body>
 </html>
