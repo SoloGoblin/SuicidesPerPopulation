@@ -1,4 +1,4 @@
-## Harry Potter data from: <https://www.kaggle.com/gulsahdemiryurek/harry-potter-dataset>
+## Suicide Data From: <https://data.oecd.org/healthstat/suicide-rates.htm>
 
 ## `npm install fs`
 

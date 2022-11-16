@@ -8,18 +8,25 @@ let suicides = suicides_csv.split("\n");
 
 let countryName;
 
-let count = 0;
+//let count = 0;
 
 suicides.forEach(function(suicideLine) {
 
   let suicideData = suicideLine.split(',');
 
   countryName = suicideData[0];
-
-  let suicideStats = {};
-
-  let years = {};
-
+  if((suicideData[0]!="LOCATION")&&(suicideData[2]=="TOT")) {
+    let suicideStats = {};
+    for(let i=0; i< suicides.length; i++) {
+      let suicideData2 = suicides[i].split(',');
+      //console.log(suicideData2);
+      if(suicideData2[0]==countryName) {
+        suicideStats[suicideData2[5]] = suicideData2[6];
+      }
+    }
+    countries[countryName] = suicideStats;
+  }
+  /*
   for(let i=count; i<suicides.length; i++) {
     if(countryName!=suicideData[0]) {
       break;
@@ -28,6 +35,7 @@ suicides.forEach(function(suicideLine) {
       suicideStats[suicideData[5]] = suicideData[6];
     }
   }
+  */
 });
 /*
 let prevCountry;
