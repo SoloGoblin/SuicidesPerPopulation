@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title><%=name%></title>
+  <meta name="Country" content="You">
+  <meta name="description" content="Suicides per Population">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1><%=name%></h1>
+  </header>
+  <section id="country-stats">
+  <h2>Stats</h2>
+  <ul>
+    <li>Year: <%=stats.year%></li>
+    <li>Frequency: <%=stats.frequency%></li>
+  </ul>
+  </section>
+
+  <%- include ('global/footer');  %>
+
+</body>
+
+</html>

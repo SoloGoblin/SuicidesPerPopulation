@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Harry Potter Characters</title>
+  <title>Suicides per population</title>
   <meta name="author" content="You">
-  <meta name="description" content="A compendium of Harry Potter characters">
+  <meta name="description" content="Suicides per Population">
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
@@ -13,32 +13,20 @@
 
 <body>
   <header>
-    <h1>Harry Potter Characters</h1>
+    <h1>Suicides per Population</h1>
   </header>
-  <section id="charcter-table">
+  <section id="country-table">
     <table>
       <tr>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>House</th>
-        <th>Species</th>
-        <th>Skill</th>
+        <th>Country</th>
+        <th>Year</th>
+        <th>Frequency</th>
       </tr>
-      <% for(character in data){ %>
+      <% for(country in data){ %>
       <tr>
-        <td><a href="<%=data[character].link%>.html"><%= character %></a></td>
-        <td><%= data[character].gender %></td>
-        <td><%= data[character].house %></td>
-        <td><%= data[character].species %></td>
-        <td>
-          <% if (data[character].skills.length > 0){ %>
-          <ol>
-            <% data[character].skills.forEach(function(val){%>
-            <li> <%=val%></li>
-            <%}) %>
-          </ol>
-          <%}%>
-        </td>
+        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
+        <td><%= data[country].year %></td>
+        <td><%= data[character].frequency %></td>
       </tr>
       <%}%>
     </table>
