@@ -1,15 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <title>Suicides per population</title>
-  <meta name="author" content="You">
-  <meta name="description" content="Suicides per Population">
-  <meta content="text/html" http-equiv="Content-type" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <link rel="stylesheet" href="styles.css">
-</head>
+<%- include ('global/header', {title:country});  %>
 
 <body>
   <header>
@@ -25,8 +14,17 @@
       <% for(country in data){ %>
       <tr>
         <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
-        <td><%= data[country].year %></td>
-        <td><%= data[character].frequency %></td>
+        <td>
+          <% if (data[country].year.length > 0){ %>
+          <ol>
+            <% data[character].skills.forEach(function(val){%>
+              <td><%= data[country].year %></td>
+              <td><%= data[country].frequency %></td>
+            <li> <%=val%></li>
+            <%}) %>
+          </ol>
+          <%}%>
+        </td>
       </tr>
       <%}%>
     </table>
