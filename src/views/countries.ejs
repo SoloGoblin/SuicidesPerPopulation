@@ -1,0 +1,27 @@
+<%- include ('global/header', {title:name});  %>
+
+<body>
+  <header>
+    <h1><%=name%></h1>
+  </header>
+  <section id="country-stats">
+  <h2>Stats</h2>
+  <ul>
+    <li>Year:
+      <% if (stats.year && stats.year.length > 0){ %>
+      <ol>
+        <% stats.year.forEach(function(year){%>
+        <li>Year: <%=stats.year%></li>
+        <li>Frequency: <%=stats.frequency%></li>
+        <%}) %>
+      </ol>
+      <%}%>
+    </li>
+  </ul>
+  </section>
+
+  <%- include ('global/footer');  %>
+
+</body>
+
+</html>
