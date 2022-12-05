@@ -15,7 +15,7 @@ for (country in country_info){
     stats: country_info[country],
     name: country
   });
-  country_info[country].link = getBetterFileName(country);
+  country_info[country].link = country;
   fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
 
 }
@@ -29,11 +29,3 @@ let index_html = ejs.render(index_template, {
 });
 
 fs.writeFileSync('../public/index.html', index_html, 'utf8');
-
-function getBetterFileName(countryName){
-  let betterFileName = countryName.split(" ").join("_");
-  betterFileName = betterFileName.split(".").join("");
-  betterFileName = betterFileName.split("(").join("");
-  betterFileName = betterFileName.split(")").join("");
-  return betterFileName;
-}
