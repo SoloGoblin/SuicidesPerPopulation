@@ -9,7 +9,7 @@
     "fs": "^0.0.1-security"
   },
   "scripts": {
-    "prebuild": "mv ‘src/styles.css’ ‘public/styles.css'",
+    "prebuild": " ",
     "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start",
