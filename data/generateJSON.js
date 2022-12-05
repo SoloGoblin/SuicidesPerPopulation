@@ -19,10 +19,12 @@ suicides.forEach(function(suicideLine) {
       let suicideData2 = suicides[i].split(',');
       if(suicideData2[0]==countryName) {
         suicideStats[suicideData2[5]] = suicideData2[6];
-      }
+        if(suicideData2[7]!=0) {
+          suicideStats[suicideData2[2]] = suicideData2[7];
+        }
     }
     countries[countryName] = suicideStats;
   }
-
+}
 });
 fs.writeFileSync('suicides.json', JSON.stringify(countries), 'utf8');
