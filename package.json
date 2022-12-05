@@ -9,10 +9,12 @@
     "fs": "^0.0.1-security"
   },
   "scripts": {
-    "prebuild:": "node prebuild.js",
-    "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
+    "prebuild": " ",
+    "build": " ",
     "postbuild": "open http://localhost:3000 && node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm run publish && npm run production:start",
+    "publish": " ",
+    "production:start": " "
   },
   "author": "",
   "license": "ISC"
