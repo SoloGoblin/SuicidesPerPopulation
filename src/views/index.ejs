@@ -8,23 +8,132 @@
     <table>
       <tr>
         <th>Country</th>
-        <th>Year</th>
-        <th>Frequency</th>
+        <th>1960</th>
+        <th>1961</th>
+        <th>1962</th>
+        <th>1963</th>
+        <th>1964</th>
+        <th>1965</th>
+        <th>1966</th>
+        <th>1967</th>
+        <th>1968</th>
+        <th>1969</th>
+        <th>1970</th>
+        <th>1971</th>
+        <th>1972</th>
+        <th>1973</th>
+        <th>1974</th>
+        <th>1975</th>
+        <th>1976</th>
+        <th>1977</th>
+        <th>1978</th>
+        <th>1979</th>
+        <th>1980</th>
+        <th>1981</th>
+        <th>1982</th>
+        <th>1983</th>
+        <th>1984</th>
+        <th>1985</th>
+        <th>1986</th>
+        <th>1987</th>
+        <th>1988</th>
+        <th>1989</th>
+        <th>1990</th>
+        <th>1991</th>
+        <th>1992</th>
+        <th>1993</th>
+        <th>1994</th>
+        <th>1995</th>
+        <th>1996</th>
+        <th>1997</th>
+        <th>1998</th>
+        <th>1999</th>
+        <th>2000</th>
+        <th>2001</th>
+        <th>2002</th>
+        <th>2003</th>
+        <th>2004</th>
+        <th>2005</th>
+        <th>2006</th>
+        <th>2007</th>
+        <th>2008</th>
+        <th>2009</th>
+        <th>2010</th>
+        <th>2011</th>
+        <th>2012</th>
+        <th>2013</th>
+        <th>2014</th>
+        <th>2015</th>
+        <th>2016</th>
+        <th>2017</th>
+        <th>2018</th>
+        <th>2019</th>
+        <th>2020</th>
       </tr>
       <% for(country in data){ %>
       <tr>
         <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
-        <td>
-          <% if (data[country].year.length > 0){ %>
-          <ol>
-            <% data[character].skills.forEach(function(val){%>
-              <td><%= data[country].year %></td>
-              <td><%= data[country].frequency %></td>
-            <li> <%=val%></li>
-            <%}) %>
-          </ol>
-          <%}%>
-        </td>
+        <td><%= data[character].1960 %></td>
+        <td><%= data[character].1961 %></td>
+        <td><%= data[character].1962 %></td>
+        <td><%= data[character].1963 %></td>
+        <td><%= data[character].1964 %></td>
+        <td><%= data[character].1965 %></td>
+        <td><%= data[character].1966 %></td>
+        <td><%= data[character].1967 %></td>
+        <td><%= data[character].1968 %></td>
+        <td><%= data[character].1969 %></td>
+        <td><%= data[character].1970 %></td>
+        <td><%= data[character].1971 %></td>
+        <td><%= data[character].1972 %></td>
+        <td><%= data[character].1973 %></td>
+        <td><%= data[character].1974 %></td>
+        <td><%= data[character].1975 %></td>
+        <td><%= data[character].1976 %></td>
+        <td><%= data[character].1977 %></td>
+        <td><%= data[character].1978 %></td>
+        <td><%= data[character].1979 %></td>
+        <td><%= data[character].1980 %></td>
+        <td><%= data[character].1981 %></td>
+        <td><%= data[character].1982 %></td>
+        <td><%= data[character].1983 %></td>
+        <td><%= data[character].1984 %></td>
+        <td><%= data[character].1985 %></td>
+        <td><%= data[character].1986 %></td>
+        <td><%= data[character].1987 %></td>
+        <td><%= data[character].1988 %></td>
+        <td><%= data[character].1989 %></td>
+        <td><%= data[character].1990 %></td>
+        <td><%= data[character].1991 %></td>
+        <td><%= data[character].1992 %></td>
+        <td><%= data[character].1993 %></td>
+        <td><%= data[character].1994 %></td>
+        <td><%= data[character].1995 %></td>
+        <td><%= data[character].1996 %></td>
+        <td><%= data[character].1997 %></td>
+        <td><%= data[character].1998 %></td>
+        <td><%= data[character].1999 %></td>
+        <td><%= data[character].2000 %></td>
+        <td><%= data[character].2001 %></td>
+        <td><%= data[character].2002 %></td>
+        <td><%= data[character].2003 %></td>
+        <td><%= data[character].2004 %></td>
+        <td><%= data[character].2005 %></td>
+        <td><%= data[character].2006 %></td>
+        <td><%= data[character].2007 %></td>
+        <td><%= data[character].2008 %></td>
+        <td><%= data[character].2009 %></td>
+        <td><%= data[character].2010 %></td>
+        <td><%= data[character].2011 %></td>
+        <td><%= data[character].2012 %></td>
+        <td><%= data[character].2013 %></td>
+        <td><%= data[character].2014 %></td>
+        <td><%= data[character].2015 %></td>
+        <td><%= data[character].2016 %></td>
+        <td><%= data[character].2017 %></td>
+        <td><%= data[character].2018 %></td>
+        <td><%= data[character].2019 %></td>
+        <td><%= data[character].2020 %></td>
       </tr>
       <%}%>
     </table>
@@ -33,5 +142,3 @@
   <%- include ('global/footer');  %>
 
 </body>
-
-</html>
