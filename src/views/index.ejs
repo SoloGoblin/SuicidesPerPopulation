@@ -1,6 +1,7 @@
 <%- include ('global/header', {title:country});  %>
 
 <body>
+  <div id='plotly'></div>
   <header>
 
     <h1>Suicides Per Population from 1960 to 2020 Index Page</h1>
@@ -12,8 +13,6 @@
     <h6>-Some countries are blank for some years meaning that this data was missing from the website originally used.</h6>
     <h3>Note:</h3>
     <h6>Suicides figures are 100000 per whole number.</h6>
-    <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
-    <div id='plotly'></div>
   </header>
   <section id="country-table">
     <table>
