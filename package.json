@@ -14,7 +14,7 @@
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start",
     "publish": " ",
-    "production:start": "open https://pages.github.com"
+    "production:start": "open https://sologoblin.github.io/SuicidesPerPopulation/public/index.html"
   },
   "author": "",
   "license": "ISC"
