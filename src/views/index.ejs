@@ -1,12 +1,10 @@
 <%- include ('global/header', {title:country});  %>
-<%- include ('global/navbar', {title:country});  %>
 <body>
   <header>
     <h1>Suicides Per Population from 1960 to 2020 Index Page</h1>
     <div id='plotly'></div>
-
     <script>
-      var data = [{
+      var plotData = [{
           type: 'choropleth',
           locationmode: 'country names',
           locations: ["Australia","Argentina","Austria","Belgium","Bulgaria","Brazil","Canada","Switzerland","Chile","Columbia","Costa Rica","Czech Republic","Germany","Denmark","Spain","Estonia","Finland","France","United Kingdom","Greece","Croatia","Hungary","Ireland","Iceland","Israel","Italy","Japan","South Korea","Lithuania","Luxembourg","Latvia","Mexico","Netherlands","Norway","New Zealand","Peru","Poland","Portual","Romania","Russia","Slovakia","Slovenia","Sweden","Turkey","United States","South Africa"],
@@ -28,7 +26,7 @@
 
       var config = {mapboxAccessToken: "pk.eyJ1Ijoic29sb21vbmsiLCJhIjoiY2xiY2I1NWN0MHJ1YzNwbnRudjR1ZnZnaSJ9.eK1z0rRGpNKMaiI8-0WVfg"};
 
-      Plotly.newPlot('plotly', data, layout, config);
+      Plotly.newPlot('plotly', plotData, layout, config);
     </script>
     <h3>Summary of project: </h3>
     <h6>Suicides per population per year between 1960-2020 are shown to have a strong correlation with national issues via the infographics in the Macro and Micro pages. We got our data from https://data.oecd.org/healthstat/suicide-rates.htm and brainstormed ways in which we would formulate our Macro and Micro pages to best communicate our message of national issues affecting people's mental health. We had Lo-Fi wireframe works and we criticized them each on Analyze the sketches from the perspective of four design principles and heuristics. We then indicated which elements from each wireframe were selected for final design, and why in short sentences. We decided on making a map of the entire world our Macro page where the total suicides per country will be displayed. Our micro pages will be line-charts to better communicate the fluctuation of rates of suicides in each country over the years. We then produced a pipeline graphic generated with LucidChart and described each step of creating our project with text. After doing lots of research on the 45 countries' history during the 1960 through 2020, we made bullet points on pivitol events that could've caused the flucatuations of suicide rates over the years. This along with our data and inforgraphics was used to better communicate our message to the public.</h6>
