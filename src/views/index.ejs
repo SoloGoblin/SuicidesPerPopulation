@@ -1,10 +1,12 @@
-<%- include ('global/header', {title:country});  %>
+<%- include ('global/header');  %>
+<%- include ('global/navbar');  %>
 <body>
   <header>
     <h1>Suicides Per Population from 1960 to 2020 Index Page</h1>
     <div id='plotly'></div>
+
     <script>
-      var plotData = [{
+      var data = [{
           type: 'choropleth',
           locationmode: 'country names',
           locations: ["Australia","Argentina","Austria","Belgium","Bulgaria","Brazil","Canada","Switzerland","Chile","Columbia","Costa Rica","Czech Republic","Germany","Denmark","Spain","Estonia","Finland","France","United Kingdom","Greece","Croatia","Hungary","Ireland","Iceland","Israel","Italy","Japan","South Korea","Lithuania","Luxembourg","Latvia","Mexico","Netherlands","Norway","New Zealand","Peru","Poland","Portual","Romania","Russia","Slovakia","Slovenia","Sweden","Turkey","United States","South Africa"],
@@ -26,7 +28,7 @@
 
       var config = {mapboxAccessToken: "pk.eyJ1Ijoic29sb21vbmsiLCJhIjoiY2xiY2I1NWN0MHJ1YzNwbnRudjR1ZnZnaSJ9.eK1z0rRGpNKMaiI8-0WVfg"};
 
-      Plotly.newPlot('plotly', plotData, layout, config);
+      Plotly.newPlot('plotly', data, layout, config);
     </script>
     <h3>Summary of project: </h3>
     <h6>Suicides per population per year between 1960-2020 are shown to have a strong correlation with national issues via the infographics in the Macro and Micro pages. We got our data from https://data.oecd.org/healthstat/suicide-rates.htm and brainstormed ways in which we would formulate our Macro and Micro pages to best communicate our message of national issues affecting people's mental health. We had Lo-Fi wireframe works and we criticized them each on Analyze the sketches from the perspective of four design principles and heuristics. We then indicated which elements from each wireframe were selected for final design, and why in short sentences. We decided on making a map of the entire world our Macro page where the total suicides per country will be displayed. Our micro pages will be line-charts to better communicate the fluctuation of rates of suicides in each country over the years. We then produced a pipeline graphic generated with LucidChart and described each step of creating our project with text. After doing lots of research on the 45 countries' history during the 1960 through 2020, we made bullet points on pivitol events that could've caused the flucatuations of suicide rates over the years. This along with our data and inforgraphics was used to better communicate our message to the public.</h6>
@@ -104,71 +106,71 @@
         <th>2019</th>
         <th>2020</th>
       </tr>
-      <% for(country in data){ %>
+      <% for(country in stats){ %>
       <tr>
-        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
-        <td><%= data[country].SUICIDE %></td>
-        <td><%= data[country].sixty %></td>
-        <td><%= data[country].sixtyOne %></td>
-        <td><%= data[country].sixtyTwo %></td>
-        <td><%= data[country].sixtyThree %></td>
-        <td><%= data[country].sixtyFour %></td>
-        <td><%= data[country].sixtyFive %></td>
-        <td><%= data[country].sixtySix %></td>
-        <td><%= data[country].sixtySeven %></td>
-        <td><%= data[country].sixtyEight %></td>
-        <td><%= data[country].sixtyNine %></td>
-        <td><%= data[country].seventy %></td>
-        <td><%= data[country].seventyOne %></td>
-        <td><%= data[country].seventyTwo %></td>
-        <td><%= data[country].seventyThree %></td>
-        <td><%= data[country].seventyFour %></td>
-        <td><%= data[country].seventyFive %></td>
-        <td><%= data[country].seventySix %></td>
-        <td><%= data[country].seventySeven %></td>
-        <td><%= data[country].seventyEight %></td>
-        <td><%= data[country].seventyNine %></td>
-        <td><%= data[country].eighty %></td>
-        <td><%= data[country].eightyOne %></td>
-        <td><%= data[country].eightyTwo %></td>
-        <td><%= data[country].eightyThree %></td>
-        <td><%= data[country].eightyFour %></td>
-        <td><%= data[country].eightyFive %></td>
-        <td><%= data[country].eightySix %></td>
-        <td><%= data[country].eightySeven %></td>
-        <td><%= data[country].eightyEight %></td>
-        <td><%= data[country].eightyNine %></td>
-        <td><%= data[country].ninety %></td>
-        <td><%= data[country].ninetyOne %></td>
-        <td><%= data[country].ninetyTwo %></td>
-        <td><%= data[country].ninetyThree %></td>
-        <td><%= data[country].ninetyFour %></td>
-        <td><%= data[country].ninetyFive %></td>
-        <td><%= data[country].ninetySix %></td>
-        <td><%= data[country].ninetySeven %></td>
-        <td><%= data[country].ninetyEight %></td>
-        <td><%= data[country].ninetyNine %></td>
-        <td><%= data[country].zero %></td>
-        <td><%= data[country].one %></td>
-        <td><%= data[country].two %></td>
-        <td><%= data[country].three %></td>
-        <td><%= data[country].four %></td>
-        <td><%= data[country].five %></td>
-        <td><%= data[country].six %></td>
-        <td><%= data[country].seven %></td>
-        <td><%= data[country].eight %></td>
-        <td><%= data[country].nine %></td>
-        <td><%= data[country].ten %></td>
-        <td><%= data[country].eleven %></td>
-        <td><%= data[country].twelve %></td>
-        <td><%= data[country].thirteen %></td>
-        <td><%= data[country].fourteen %></td>
-        <td><%= data[country].fifteen %></td>
-        <td><%= data[country].sixteen %></td>
-        <td><%= data[country].seventeen %></td>
-        <td><%= data[country].eighteen %></td>
-        <td><%= data[country].nineteen %></td>
-        <td><%= data[country].twenty %></td>
+        <td><a href="<%=stats[country].link%>.html"><%= country %></a></td>
+        <td><%= stats[country].SUICIDE %></td>
+        <td><%= stats[country].sixty %></td>
+        <td><%= stats[country].sixtyOne %></td>
+        <td><%= stats[country].sixtyTwo %></td>
+        <td><%= stats[country].sixtyThree %></td>
+        <td><%= stats[country].sixtyFour %></td>
+        <td><%= stats[country].sixtyFive %></td>
+        <td><%= stats[country].sixtySix %></td>
+        <td><%= stats[country].sixtySeven %></td>
+        <td><%= stats[country].sixtyEight %></td>
+        <td><%= stats[country].sixtyNine %></td>
+        <td><%= stats[country].seventy %></td>
+        <td><%= stats[country].seventyOne %></td>
+        <td><%= stats[country].seventyTwo %></td>
+        <td><%= stats[country].seventyThree %></td>
+        <td><%= stats[country].seventyFour %></td>
+        <td><%= stats[country].seventyFive %></td>
+        <td><%= stats[country].seventySix %></td>
+        <td><%= stats[country].seventySeven %></td>
+        <td><%= stats[country].seventyEight %></td>
+        <td><%= stats[country].seventyNine %></td>
+        <td><%= stats[country].eighty %></td>
+        <td><%= stats[country].eightyOne %></td>
+        <td><%= stats[country].eightyTwo %></td>
+        <td><%= stats[country].eightyThree %></td>
+        <td><%= stats[country].eightyFour %></td>
+        <td><%= stats[country].eightyFive %></td>
+        <td><%= stats[country].eightySix %></td>
+        <td><%= stats[country].eightySeven %></td>
+        <td><%= stats[country].eightyEight %></td>
+        <td><%= stats[country].eightyNine %></td>
+        <td><%= stats[country].ninety %></td>
+        <td><%= stats[country].ninetyOne %></td>
+        <td><%= stats[country].ninetyTwo %></td>
+        <td><%= stats[country].ninetyThree %></td>
+        <td><%= stats[country].ninetyFour %></td>
+        <td><%= stats[country].ninetyFive %></td>
+        <td><%= stats[country].ninetySix %></td>
+        <td><%= stats[country].ninetySeven %></td>
+        <td><%= stats[country].ninetyEight %></td>
+        <td><%= stats[country].ninetyNine %></td>
+        <td><%= stats[country].zero %></td>
+        <td><%= stats[country].one %></td>
+        <td><%= stats[country].two %></td>
+        <td><%= stats[country].three %></td>
+        <td><%= stats[country].four %></td>
+        <td><%= stats[country].five %></td>
+        <td><%= stats[country].six %></td>
+        <td><%= stats[country].seven %></td>
+        <td><%= stats[country].eight %></td>
+        <td><%= stats[country].nine %></td>
+        <td><%= stats[country].ten %></td>
+        <td><%= stats[country].eleven %></td>
+        <td><%= stats[country].twelve %></td>
+        <td><%= stats[country].thirteen %></td>
+        <td><%= stats[country].fourteen %></td>
+        <td><%= stats[country].fifteen %></td>
+        <td><%= stats[country].sixteen %></td>
+        <td><%= stats[country].seventeen %></td>
+        <td><%= stats[country].eighteen %></td>
+        <td><%= stats[country].nineteen %></td>
+        <td><%= stats[country].twenty %></td>
       </tr>
       <%}%>
     </table>
