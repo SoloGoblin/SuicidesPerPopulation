@@ -4,7 +4,6 @@
 <head>
   <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
   <meta charset="utf-8" />
-  <title>ROU</title>
   <meta name="Suicides per Population page" content="You">
   <meta name="description" content="Suicides per Population">
   <meta content="text/html" http-equiv="Content-type" />
@@ -12,12 +11,130 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Suicides per Population</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Macro-summary</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Micro-summaries
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          
+            <a class="dropdown-item" href="AUS.html">AUS</a>
+          
+            <a class="dropdown-item" href="AUT.html">AUT</a>
+          
+            <a class="dropdown-item" href="BEL.html">BEL</a>
+          
+            <a class="dropdown-item" href="CAN.html">CAN</a>
+          
+            <a class="dropdown-item" href="CZE.html">CZE</a>
+          
+            <a class="dropdown-item" href="DNK.html">DNK</a>
+          
+            <a class="dropdown-item" href="FIN.html">FIN</a>
+          
+            <a class="dropdown-item" href="FRA.html">FRA</a>
+          
+            <a class="dropdown-item" href="DEU.html">DEU</a>
+          
+            <a class="dropdown-item" href="GRC.html">GRC</a>
+          
+            <a class="dropdown-item" href="HUN.html">HUN</a>
+          
+            <a class="dropdown-item" href="ISL.html">ISL</a>
+          
+            <a class="dropdown-item" href="IRL.html">IRL</a>
+          
+            <a class="dropdown-item" href="ITA.html">ITA</a>
+          
+            <a class="dropdown-item" href="JPN.html">JPN</a>
+          
+            <a class="dropdown-item" href="KOR.html">KOR</a>
+          
+            <a class="dropdown-item" href="LUX.html">LUX</a>
+          
+            <a class="dropdown-item" href="MEX.html">MEX</a>
+          
+            <a class="dropdown-item" href="NLD.html">NLD</a>
+          
+            <a class="dropdown-item" href="NZL.html">NZL</a>
+          
+            <a class="dropdown-item" href="NOR.html">NOR</a>
+          
+            <a class="dropdown-item" href="POL.html">POL</a>
+          
+            <a class="dropdown-item" href="PRT.html">PRT</a>
+          
+            <a class="dropdown-item" href="SVK.html">SVK</a>
+          
+            <a class="dropdown-item" href="ESP.html">ESP</a>
+          
+            <a class="dropdown-item" href="SWE.html">SWE</a>
+          
+            <a class="dropdown-item" href="CHE.html">CHE</a>
+          
+            <a class="dropdown-item" href="GBR.html">GBR</a>
+          
+            <a class="dropdown-item" href="USA.html">USA</a>
+          
+            <a class="dropdown-item" href="BRA.html">BRA</a>
+          
+            <a class="dropdown-item" href="CHL.html">CHL</a>
+          
+            <a class="dropdown-item" href="EST.html">EST</a>
+          
+            <a class="dropdown-item" href="ISR.html">ISR</a>
+          
+            <a class="dropdown-item" href="RUS.html">RUS</a>
+          
+            <a class="dropdown-item" href="SVN.html">SVN</a>
+          
+            <a class="dropdown-item" href="ZAF.html">ZAF</a>
+          
+            <a class="dropdown-item" href="TUR.html">TUR</a>
+          
+            <a class="dropdown-item" href="COL.html">COL</a>
+          
+            <a class="dropdown-item" href="LVA.html">LVA</a>
+          
+            <a class="dropdown-item" href="LTU.html">LTU</a>
+          
+            <a class="dropdown-item" href="CRI.html">CRI</a>
+          
+            <a class="dropdown-item" href="ARG.html">ARG</a>
+          
+            <a class="dropdown-item" href="BGR.html">BGR</a>
+          
+            <a class="dropdown-item" href="HRV.html">HRV</a>
+          
+            <a class="dropdown-item" href="PER.html">PER</a>
+          
+            <a class="dropdown-item" href="ROU.html">ROU</a>
+          
+        </div>
+      </li>
+    </ul>
+    </div>
+  </nav>
+
 <body>
   <header>
     <h1>Suicides Per Population from 1960 to 2020 Index Page</h1>
     <div id='plotly'></div>
+
     <script>
-      var plotData = [{
+      var data = [{
           type: 'choropleth',
           locationmode: 'country names',
           locations: ["Australia","Argentina","Austria","Belgium","Bulgaria","Brazil","Canada","Switzerland","Chile","Columbia","Costa Rica","Czech Republic","Germany","Denmark","Spain","Estonia","Finland","France","United Kingdom","Greece","Croatia","Hungary","Ireland","Iceland","Israel","Italy","Japan","South Korea","Lithuania","Luxembourg","Latvia","Mexico","Netherlands","Norway","New Zealand","Peru","Poland","Portual","Romania","Russia","Slovakia","Slovenia","Sweden","Turkey","United States","South Africa"],
@@ -39,7 +156,7 @@
 
       var config = {mapboxAccessToken: "pk.eyJ1Ijoic29sb21vbmsiLCJhIjoiY2xiY2I1NWN0MHJ1YzNwbnRudjR1ZnZnaSJ9.eK1z0rRGpNKMaiI8-0WVfg"};
 
-      Plotly.newPlot('plotly', plotData, layout, config);
+      Plotly.newPlot('plotly', data, layout, config);
     </script>
     <h3>Summary of project: </h3>
     <h6>Suicides per population per year between 1960-2020 are shown to have a strong correlation with national issues via the infographics in the Macro and Micro pages. We got our data from https://data.oecd.org/healthstat/suicide-rates.htm and brainstormed ways in which we would formulate our Macro and Micro pages to best communicate our message of national issues affecting people's mental health. We had Lo-Fi wireframe works and we criticized them each on Analyze the sketches from the perspective of four design principles and heuristics. We then indicated which elements from each wireframe were selected for final design, and why in short sentences. We decided on making a map of the entire world our Macro page where the total suicides per country will be displayed. Our micro pages will be line-charts to better communicate the fluctuation of rates of suicides in each country over the years. We then produced a pipeline graphic generated with LucidChart and described each step of creating our project with text. After doing lots of research on the 45 countries' history during the 1960 through 2020, we made bullet points on pivitol events that could've caused the flucatuations of suicide rates over the years. This along with our data and inforgraphics was used to better communicate our message to the public.</h6>

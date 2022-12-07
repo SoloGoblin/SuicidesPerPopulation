@@ -4,13 +4,129 @@
 <head>
   <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
   <meta charset="utf-8" />
-  <title>IRL</title>
   <meta name="Suicides per Population page" content="You">
   <meta name="description" content="Suicides per Population">
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Suicides per Population</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Macro-summary</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Micro-summaries
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          
+            <a class="dropdown-item" href="AUS.html">AUS</a>
+          
+            <a class="dropdown-item" href="AUT.html">AUT</a>
+          
+            <a class="dropdown-item" href="BEL.html">BEL</a>
+          
+            <a class="dropdown-item" href="CAN.html">CAN</a>
+          
+            <a class="dropdown-item" href="CZE.html">CZE</a>
+          
+            <a class="dropdown-item" href="DNK.html">DNK</a>
+          
+            <a class="dropdown-item" href="FIN.html">FIN</a>
+          
+            <a class="dropdown-item" href="FRA.html">FRA</a>
+          
+            <a class="dropdown-item" href="DEU.html">DEU</a>
+          
+            <a class="dropdown-item" href="GRC.html">GRC</a>
+          
+            <a class="dropdown-item" href="HUN.html">HUN</a>
+          
+            <a class="dropdown-item" href="ISL.html">ISL</a>
+          
+            <a class="dropdown-item" href="IRL.html">IRL</a>
+          
+            <a class="dropdown-item" href="ITA.html">ITA</a>
+          
+            <a class="dropdown-item" href="JPN.html">JPN</a>
+          
+            <a class="dropdown-item" href="KOR.html">KOR</a>
+          
+            <a class="dropdown-item" href="LUX.html">LUX</a>
+          
+            <a class="dropdown-item" href="MEX.html">MEX</a>
+          
+            <a class="dropdown-item" href="NLD.html">NLD</a>
+          
+            <a class="dropdown-item" href="NZL.html">NZL</a>
+          
+            <a class="dropdown-item" href="NOR.html">NOR</a>
+          
+            <a class="dropdown-item" href="POL.html">POL</a>
+          
+            <a class="dropdown-item" href="PRT.html">PRT</a>
+          
+            <a class="dropdown-item" href="SVK.html">SVK</a>
+          
+            <a class="dropdown-item" href="ESP.html">ESP</a>
+          
+            <a class="dropdown-item" href="SWE.html">SWE</a>
+          
+            <a class="dropdown-item" href="CHE.html">CHE</a>
+          
+            <a class="dropdown-item" href="GBR.html">GBR</a>
+          
+            <a class="dropdown-item" href="USA.html">USA</a>
+          
+            <a class="dropdown-item" href="BRA.html">BRA</a>
+          
+            <a class="dropdown-item" href="CHL.html">CHL</a>
+          
+            <a class="dropdown-item" href="EST.html">EST</a>
+          
+            <a class="dropdown-item" href="ISR.html">ISR</a>
+          
+            <a class="dropdown-item" href="RUS.html">RUS</a>
+          
+            <a class="dropdown-item" href="SVN.html">SVN</a>
+          
+            <a class="dropdown-item" href="ZAF.html">ZAF</a>
+          
+            <a class="dropdown-item" href="TUR.html">TUR</a>
+          
+            <a class="dropdown-item" href="COL.html">COL</a>
+          
+            <a class="dropdown-item" href="LVA.html">LVA</a>
+          
+            <a class="dropdown-item" href="LTU.html">LTU</a>
+          
+            <a class="dropdown-item" href="CRI.html">CRI</a>
+          
+            <a class="dropdown-item" href="ARG.html">ARG</a>
+          
+            <a class="dropdown-item" href="BGR.html">BGR</a>
+          
+            <a class="dropdown-item" href="HRV.html">HRV</a>
+          
+            <a class="dropdown-item" href="PER.html">PER</a>
+          
+            <a class="dropdown-item" href="ROU.html">ROU</a>
+          
+        </div>
+      </li>
+    </ul>
+    </div>
+  </nav>
 
 <body>
   <header>
@@ -19,7 +135,7 @@
     <script>
         var data = [{
         x: [1960, 1961, 1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],
-        y: [3.7, 3.9, 2.3,3.1,2.6,2.2,3.1,3.1,3,2.3,2.2,3.5,3.8,4.3,4.8,5.8,7,5.6,6,6.9,8,8,8.6,9.7,8,9.3,9.5,8.4,8.9,9.4,11.1,11,11.4,10.1,12.1,11.9,11.6,13.1,13.7,11.7,12.3,12.9,11.4,11.5,11.6,10.9,10.7,10.5,11.5,11.8,10.8,12.2,12.2,11.1,10.8,9.5,,,9.4,,],
+        y: [, , ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,],
         type: 'scatter'}];
         Plotly.newPlot('plotly2', data);
     </script>
@@ -27,71 +143,71 @@
   <section id="country-stats">
   <h2>Stats</h2>
   <ul>
-    <li>1960: 3.7</li>
-    <li>1961: 3.9</li>
-    <li>1962: 2.3</li>
-    <li>1963: 3.1</li>
-    <li>1964: 2.6</li>
-    <li>1965: 2.2</li>
-    <li>1966: 3.1</li>
-    <li>1967: 3.1</li>
-    <li>1968: 3</li>
-    <li>1969: 2.3</li>
-    <li>1970: 2.2</li>
-    <li>1971: 3.5</li>
-    <li>1972: 3.8</li>
-    <li>1973: 4.3</li>
-    <li>1974: 4.8</li>
-    <li>1975: 5.8</li>
-    <li>1976: 7</li>
-    <li>1977: 5.6</li>
-    <li>1978: 6</li>
-    <li>1979: 6.9</li>
-    <li>1980: 8</li>
-    <li>1981: 8</li>
-    <li>1982: 8.6</li>
-    <li>1983: 9.7</li>
-    <li>1984: 8</li>
-    <li>1985: 9.3</li>
-    <li>1986: 9.5</li>
-    <li>1987: 8.4</li>
-    <li>1988: 8.9</li>
-    <li>1989: 9.4</li>
-    <li>1990: 11.1</li>
-    <li>1991: 11</li>
-    <li>1992: 11.4</li>
-    <li>1993: 10.1</li>
-    <li>1994: 12.1</li>
-    <li>1995: 11.9</li>
-    <li>1996: 11.6</li>
-    <li>1997: 13.1</li>
-    <li>1998: 13.7</li>
-    <li>1999: 11.7</li>
-    <li>2000: 12.3</li>
-    <li>2001: 12.9</li>
-    <li>2002: 11.4</li>
-    <li>2003: 11.5</li>
-    <li>2004: 11.6</li>
-    <li>2005: 10.9</li>
-    <li>2006: 10.7</li>
-    <li>2007: 10.5</li>
-    <li>2008: 11.5</li>
-    <li>2009: 11.8</li>
-    <li>2010: 10.8</li>
-    <li>2011: 12.2</li>
-    <li>2012: 12.2</li>
-    <li>2013: 11.1</li>
-    <li>2014: 10.8</li>
-    <li>2015: 9.5</li>
+    <li>1960: </li>
+    <li>1961: </li>
+    <li>1962: </li>
+    <li>1963: </li>
+    <li>1964: </li>
+    <li>1965: </li>
+    <li>1966: </li>
+    <li>1967: </li>
+    <li>1968: </li>
+    <li>1969: </li>
+    <li>1970: </li>
+    <li>1971: </li>
+    <li>1972: </li>
+    <li>1973: </li>
+    <li>1974: </li>
+    <li>1975: </li>
+    <li>1976: </li>
+    <li>1977: </li>
+    <li>1978: </li>
+    <li>1979: </li>
+    <li>1980: </li>
+    <li>1981: </li>
+    <li>1982: </li>
+    <li>1983: </li>
+    <li>1984: </li>
+    <li>1985: </li>
+    <li>1986: </li>
+    <li>1987: </li>
+    <li>1988: </li>
+    <li>1989: </li>
+    <li>1990: </li>
+    <li>1991: </li>
+    <li>1992: </li>
+    <li>1993: </li>
+    <li>1994: </li>
+    <li>1995: </li>
+    <li>1996: </li>
+    <li>1997: </li>
+    <li>1998: </li>
+    <li>1999: </li>
+    <li>2000: </li>
+    <li>2001: </li>
+    <li>2002: </li>
+    <li>2003: </li>
+    <li>2004: </li>
+    <li>2005: </li>
+    <li>2006: </li>
+    <li>2007: </li>
+    <li>2008: </li>
+    <li>2009: </li>
+    <li>2010: </li>
+    <li>2011: </li>
+    <li>2012: </li>
+    <li>2013: </li>
+    <li>2014: </li>
+    <li>2015: </li>
     <li>2016: </li>
-    <li>2017: 2.2</li>
-    <li>2018: 9.4</li>
+    <li>2017: </li>
+    <li>2018: </li>
     <li>2019: </li>
     <li>2020: </li>
-    <li>Historical Background: https://www.ducksters.com/geography/country/ireland_history_timeline.php. The fluctuating rate of suicide rates may be due to these events: 1969 - The Troubles begin in Northern Ireland between the IRA and the loyalists. Constant violence between the two groups existed up until 1998. 1990 - Mary Robinson is elected President of Ireland. She is the first woman president of the country. 1998 - The Belfast Agreement is signed reducing the violence and putting an end to The Troubles</li>
-    <li>Total suicide deaths throughout 1960-2020 in this country: 451</li>
-    <li>Macro Average across all countries during 1960-2020: 622</li>
-    <li>Qualitative comparison between Macro Average and total suicides in this country: The total suicides in this counrty is lesser than the average among all countries included from 1960 until 2020.</li>
+    <li>Historical Background: </li>
+    <li>Total suicide deaths throughout 1960-2020 in this country: </li>
+    <li>Macro Average across all countries during 1960-2020: [object Object]</li>
+    <li>Qualitative comparison between Macro Average and total suicides in this country: </li>
   </ul>
   </section>
 
