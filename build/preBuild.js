@@ -18,4 +18,4 @@ import {moveFile} from 'move-file';
 await moveFile(src/styles.css, public/styles.css);
 */
 //fs.renameSync("src/styles.css", "public/styles.css");
-fs.rmdirSync("public");
+//fs.rmdirSync("public");
