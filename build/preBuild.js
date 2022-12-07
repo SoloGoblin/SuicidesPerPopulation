@@ -1,4 +1,5 @@
-/* const fs = require("fs");
+const fs = require("fs");
+/*
 const path = require("path");
 const mv = require("mv");
 
@@ -12,4 +13,9 @@ fs.rename(oldLocation, newLocation, function (err) {
         console.log("Successfully moved the file!");
     }
 });
+
+import {moveFile} from 'move-file';
+await moveFile(src/styles.css, public/styles.css);
 */
+//fs.renameSync("src/styles.css", "public/styles.css");
+fs.rmdirSync("public");

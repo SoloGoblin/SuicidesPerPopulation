@@ -6,10 +6,11 @@
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "move-file": "^3.0.0"
   },
   "scripts": {
-    "prebuild": " ",
+    "prebuild": "cd build && node preBuild.js",
     "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild": "open http://localhost:3000 && node server.js",
     "deploy": "npm run publish && npm run production:start",
